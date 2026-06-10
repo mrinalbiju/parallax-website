@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA — A Parallax Experience</title>
+  <meta name="description" content="A modern website showcasing layered parallax effects, scroll animations and 3D interactions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Custom cursor glow -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="logo">NO<span>VA</span></a>
+    <ul class="nav-links">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#showcase">Showcase</a></li>
+      <li><a href="#stats">Stats</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============ HERO with layered parallax ============ -->
+  <header class="hero" id="hero">
+    <!-- parallax layers (move at different speeds on scroll + mouse) -->
+    <div class="layer stars" data-speed="0.1" data-mouse="8"></div>
+    <div class="layer blob blob-1" data-speed="0.25" data-mouse="30"></div>
+    <div class="layer blob blob-2" data-speed="0.35" data-mouse="50"></div>
+    <div class="layer blob blob-3" data-speed="0.2" data-mouse="20"></div>
+    <div class="layer grid-floor" data-speed="0.5"></div>
+
+    <div class="hero-content" data-speed="0.65">
+      <p class="hero-eyebrow reveal">SCROLL-DRIVEN · LAYERED · IMMERSIVE</p>
+      <h1 class="hero-title">
+        <span class="line reveal">Depth is not</span>
+        <span class="line reveal delay-1">a dimension.</span>
+        <span class="line reveal delay-2 gradient-text">It's a feeling.</span>
+      </h1>
+      <p class="hero-sub reveal delay-3">
+        NOVA is a modern parallax playground — every layer moves at its own speed,
+        every scroll tells a story.
+      </p>
+      <div class="hero-cta reveal delay-4">
+        <a href="#features" class="btn btn-primary">Explore the depth</a>
+        <a href="#showcase" class="btn btn-ghost">See showcase</a>
+      </div>
+    </div>
+
+    <div class="scroll-indicator">
+      <div class="mouse"><div class="wheel"></div></div>
+      <span>scroll</span>
+    </div>
+  </header>
+
+  <!-- ============ FEATURES with floating parallax shapes ============ -->
+  <section class="features" id="features">
+    <div class="float-shape shape-ring" data-speed="-0.15"></div>
+    <div class="float-shape shape-dot" data-speed="0.2"></div>
+
+    <div class="section-head">
+      <p class="section-eyebrow reveal">WHY IT FEELS ALIVE</p>
+      <h2 class="section-title reveal">Layers upon <span class="gradient-text">layers</span></h2>
+    </div>
+
+    <div class="feature-grid">
+      <article class="feature-card tilt reveal">
+        <div class="feature-icon">🌌</div>
+        <h3>Multi-speed scrolling</h3>
+        <p>Background, midground and foreground drift apart as you scroll, creating real depth perception.</p>
+      </article>
+      <article class="feature-card tilt reveal delay-1">
+        <div class="feature-icon">🖱️</div>
+        <h3>Mouse parallax</h3>
+        <p>Move your cursor across the hero — the blobs and starfield respond to you in real time.</p>
+      </article>
+      <article class="feature-card tilt reveal delay-2">
+        <div class="feature-icon">🃏</div>
+        <h3>3D tilt cards</h3>
+        <p>These cards rotate in 3D space toward your cursor. Go ahead, hover one.</p>
+      </article>
+      <article class="feature-card tilt reveal delay-3">
+        <div class="feature-icon">✨</div>
+        <h3>Reveal on scroll</h3>
+        <p>Content fades and rises into view exactly when it enters the viewport. Nothing jumps.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PARALLAX BANNER 1 ============ -->
+  <section class="banner banner-1">
+    <div class="banner-bg" data-bg-parallax="0.4"></div>
+    <blockquote class="banner-quote reveal">
+      “Good design is felt before it is seen.”
+    </blockquote>
+  </section>
+
+  <!-- ============ SHOWCASE: alternating parallax panels ============ -->
+  <section class="showcase" id="showcase">
+    <div class="section-head">
+      <p class="section-eyebrow reveal">SHOWCASE</p>
+      <h2 class="section-title reveal">Moments in <span class="gradient-text">motion</span></h2>
+    </div>
+
+    <div class="panel">
+      <div class="panel-visual" data-speed="0.12">
+        <div class="orb orb-violet"></div>
+      </div>
+      <div class="panel-text reveal-left">
+        <span class="panel-num">01</span>
+        <h3>The Drift</h3>
+        <p>Visual elements travel slower than the page itself, so they appear suspended in space — like objects seen from a moving train window.</p>
+      </div>
+    </div>
+
+    <div class="panel panel-flip">
+      <div class="panel-visual" data-speed="-0.12">
+        <div class="orb orb-cyan"></div>
+      </div>
+      <div class="panel-text reveal-right">
+        <span class="panel-num">02</span>
+        <h3>The Counter-drift</h3>
+        <p>This orb moves <em>against</em> the scroll direction. Opposing motion between layers is what tricks the eye into perceiving depth.</p>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-visual" data-speed="0.18">
+        <div class="orb orb-rose"></div>
+      </div>
+      <div class="panel-text reveal-left">
+        <span class="panel-num">03</span>
+        <h3>The Glow</h3>
+        <p>Soft radial gradients and blur create atmosphere without a single image file — this entire site ships with zero raster assets.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS with counters ============ -->
+  <section class="stats" id="stats">
+    <div class="float-shape shape-ring2" data-speed="0.25"></div>
+    <div class="stat reveal">
+      <span class="stat-num" data-count="12">0</span>
+      <span class="stat-label">Parallax layers</span>
+    </div>
+    <div class="stat reveal delay-1">
+      <span class="stat-num" data-count="60">0</span>
+      <span class="stat-label">FPS animations</span>
+    </div>
+    <div class="stat reveal delay-2">
+      <span class="stat-num" data-count="0">0</span>
+      <span class="stat-label">Image files used</span>
+    </div>
+    <div class="stat reveal delay-3">
+      <span class="stat-num" data-count="100">0</span>
+      <span class="stat-label">% hand-crafted</span>
+    </div>
+  </section>
+
+  <!-- ============ PARALLAX BANNER 2 ============ -->
+  <section class="banner banner-2">
+    <div class="banner-bg" data-bg-parallax="0.35"></div>
+    <blockquote class="banner-quote reveal">
+      “Motion with purpose. Depth with meaning.”
+    </blockquote>
+  </section>
+
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>PARALLAX · DEPTH · MOTION · LAYERS · IMMERSION ·&nbsp;</span>
+      <span>PARALLAX · DEPTH · MOTION · LAYERS · IMMERSION ·&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ============ CONTACT / FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <div class="layer blob blob-footer" data-speed="0.15"></div>
+    <h2 class="footer-title reveal">Ready to add <span class="gradient-text">depth</span><br/>to your next project?</h2>
+    <a href="mailto:hello@example.com" class="btn btn-primary reveal delay-1">Get in touch</a>
+    <p class="footer-note">Built with vanilla HTML, CSS &amp; JavaScript — no frameworks, no images.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
